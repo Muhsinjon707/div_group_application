@@ -3,12 +3,16 @@ import React from "react";
 // Component imports
 import Header from "../Header";
 import Footer from "../Footer";
+import Hero from "../Hero";
+import OurServices from "../OurServices";
 
 const Home = () => {
   return (
-    <div className="max-w-screen w-full min-h-screen">
+    <div className="bg-[#FEF4FF] max-w-screen mx-auto w-full min-h-screen">
       <Header />
-      Home Page
+      {/* <Hero /> */}
+
+      <OurServices />
       <Footer />
     </div>
   );

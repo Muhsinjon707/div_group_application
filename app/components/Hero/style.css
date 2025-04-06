@@ -1,0 +1,7 @@
+.outer-layer {
+  background-color: #3980FF;
+  background: url("../../assets/img/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1500px 797px;
+}
