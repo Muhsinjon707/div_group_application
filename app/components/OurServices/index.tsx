@@ -13,14 +13,14 @@ import design from "../../assets/card-items/design.svg";
 
 const OurServices = () => {
   return (
-    <div className="min-h-screen container 2xl:max-w-7xl mx-auto mt-[87px] mb-[120px]">
+    <section className="min-h-screen container 2xl:max-w-7xl mx-auto mt-[57px] mb-10">
       <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-14">
-        <h3 className="font-bold text-[55px] tracking-[103%]">Наши услуги</h3>
-        <p className="text-[16px] w-[424px] opacity-[.69]">
+        <h3 className="font-bold text-[40px] md:text-[55px] tracking-[103%]">Наши услуги</h3>
+        <p className="text-[16px] w-[424px] opacity-[.69] text-center">
           Разработка мобильных приложений и веб-проектов для бизнеса и стартапо
         </p>
       </div>
-      <div className="service-cards mt-[65px] items-start">
+      <div className="service-cards mt-10 items-start">
         <div
           style={{
             boxShadow: `
@@ -108,7 +108,7 @@ const OurServices = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

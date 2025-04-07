@@ -6,6 +6,7 @@ import Footer from "../Footer";
 import Hero from "../Hero";
 import OurServices from "../OurServices";
 import ProjectWorkFlow from "../ProjectWorkFlow";
+import Pricing from "../Pricing";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <OurServices />
 
       <ProjectWorkFlow />
+
+      <Pricing />
 
       <Footer />
     </div>

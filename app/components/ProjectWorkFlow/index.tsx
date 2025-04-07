@@ -99,7 +99,7 @@ const cardExtraImagePosition = (id: number) => {
 
 const ProjectWorkFlow = () => {
   return (
-    <div className="bg-[#3980FF] min-w-[395px] min-h-[913px] rounded-[20px]">
+    <section className="bg-[#3980FF] min-w-[395px] min-h-[913px] rounded-[20px]">
       <div className="container max-w-7xl mx-auto flex flex-col items-center justify-center gap-20 py-16">
         <h2 className="font-semibold text-[55px] text-white">
           Этапы разработки
@@ -150,7 +150,7 @@ const ProjectWorkFlow = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
