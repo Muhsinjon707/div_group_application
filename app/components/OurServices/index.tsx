@@ -20,7 +20,7 @@ const OurServices = () => {
           Разработка мобильных приложений и веб-проектов для бизнеса и стартапо
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-[30px] mt-[65px] items-start justify-items-center">
+      <div className="service-cards mt-[65px] items-start">
         <div
           style={{
             boxShadow: `
