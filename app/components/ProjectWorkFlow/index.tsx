@@ -15,11 +15,18 @@ import fifth from "../../assets/work-flow/fifth.png";
 import sixth from "../../assets/work-flow/sixth.png";
 import seventh from "../../assets/work-flow/seventh.png";
 
+// Extra images
+import devcode from "../../assets/background/devcode.svg";
+import rocket from "../../assets/background/rocket.svg";
+import settings from "../../assets/background/settings.svg";
+import sphere from "../../assets/background/sphere.svg";
+
 interface CardInterface {
   id: number;
   image: StaticImageData;
   title: string;
   description: string;
+  extraImage?: StaticImageData;
 }
 
 const flowCards: CardInterface[] = [
@@ -29,6 +36,7 @@ const flowCards: CardInterface[] = [
     title: "Сбор требований",
     description:
       "Детальное изучение требований, ресурсов и исходной информации по проекту и формирование технического задания на разработку ПО.",
+    extraImage: sphere,
   },
   {
     id: 2,
@@ -50,6 +58,7 @@ const flowCards: CardInterface[] = [
     title: "Разработка",
     description:
       "Процесс разработки системы интеллектуального учета, мобильного приложения или веб-сайта в режиме максимальной прозрачности.",
+    extraImage: devcode,
   },
   {
     id: 5,
@@ -63,6 +72,7 @@ const flowCards: CardInterface[] = [
     image: sixth,
     title: "Развертывание",
     description: "Запуск готового продукта в работу (ИСУ, сайта, приложения).",
+    extraImage: rocket,
   },
   {
     id: 7,
@@ -70,8 +80,22 @@ const flowCards: CardInterface[] = [
     title: "Поддержка и обслуживание",
     description:
       "Обеспечиваем полную техническую поддержку и сопровождение по всем вопросам, возникающим после развертывания.",
+    extraImage: settings,
   },
 ];
+
+const cardExtraImagePosition = (id: number) => {
+  switch (id) {
+    case 1:
+      return "-top-14 right-0";
+    case 4:
+      return "-top-20 left-1";
+    case 6:
+      return "-top-14 -left-3";
+    case 7:
+      return "-top-22 -right-8";
+  }
+};
 
 const ProjectWorkFlow = () => {
   return (
@@ -85,7 +109,7 @@ const ProjectWorkFlow = () => {
             return (
               <div
                 key={`Card-${card.id}`}
-                className="w-[300px] flex flex-col items-start  gap-[30px]"
+                className="relative w-[300px] flex flex-col items-start  gap-[30px]"
               >
                 <Image
                   className="bg-[#4788ff] rounded-2xl border border-blue-400"
@@ -94,6 +118,15 @@ const ProjectWorkFlow = () => {
                   width={300}
                   height={130}
                 />
+                {card.extraImage && (
+                  <Image
+                    className={`
+                      absolute ${cardExtraImagePosition(card.id)} 
+                    `}
+                    src={card.extraImage}
+                    alt={`${card.title}'s extra image`}
+                  />
+                )}
                 <div className="text-white flex flex-col items-start justify-start gap-5">
                   <div className="w-full flex items-center gap-4">
                     <span className="shrink-0 font-semibold text-xl px-4 py-2 rounded-full bg-[#0C4AB3]">
@@ -111,7 +144,9 @@ const ProjectWorkFlow = () => {
             );
           })}
           <div className="bg-[#EB5757] w-[300px] h-[130px] rounded-[15px] text-white inline-flex justify-center items-center">
-            <button className="font-semibold text-[17px]">Оставить заявку</button>
+            <button className="font-semibold text-[17px]">
+              Оставить заявку
+            </button>
           </div>
         </div>
       </div>
