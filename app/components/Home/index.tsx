@@ -5,15 +5,25 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Hero from "../Hero";
 import OurServices from "../OurServices";
+import ProjectWorkFlow from "../ProjectWorkFlow";
+import Pricing from "../Pricing";
+import AppBenefits from "../AppBenefits";
 
 const Home = () => {
   return (
-    <div className="bg-[#FEF4FF] max-w-screen mx-auto w-full min-h-screen">
+    <div className="bg-[#FEF4FF] min-w-screen w-screen mx-auto min-h-screen px-2 sm:px-[30px]">
       <Header />
       {/* <Hero /> */}
 
       <OurServices />
-      <Footer />
+
+      <ProjectWorkFlow />
+
+      <Pricing />
+
+      <AppBenefits />
+
+      {/* <Footer /> */}
     </div>
   );
 };
