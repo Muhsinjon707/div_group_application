@@ -15,6 +15,8 @@ import tickTwo from "../../assets/pricing/check-two.svg";
 import bookmarkTwo from "../../assets/pricing/bookmark-two.svg";
 import tickThree from "../../assets/pricing/check-three.svg";
 import bookmarkThree from "../../assets/pricing/bookmark-three.svg";
+import earth from "../../assets/pricing/earth-sphere.svg";
+import white_sphere from "../../assets/pricing/big-white-sphere.svg";
 
 import "./style.css";
 
@@ -94,16 +96,18 @@ const chooseBookmarkIcon = (id: number) => {
 
 const Pricing = () => {
   return (
-    <section className="container mt-[65px] mb-[130px] mx-auto flex flex-col items-center justify-center">
+    <section className="relative container mt-[65px] mb-[130px] mx-auto flex flex-col items-center justify-center">
       <h2 className="min-w-[440px] font-semibold text-center text-[40px] md:text-[55px] mb-[40px]">
         Стоимость разработки мобильных приложений
       </h2>
-      <p className="min-w-[440px] font-base text-[16px] text-center text-black opacity-[.69] mb-[56px]">
+      <p className="min-w-[440px] max-w-[850px] font-base text-[16px] text-center text-black opacity-[.69] mb-[56px]">
         Мы собрали стандартные элементы приложений в пакеты, для примерного
         понимания стоимости разработки. Чтобы заказать мобильное приложение
         свяжитесь с нами, мы вас проконсультируем, проведем аудит ценовых
         предложений других студий. Ниже цены на типовые приложения.
       </p>
+      <Image className="absolute top-36 left-10" width={96} height={96} src={earth} alt="Earth sphere"/>
+      <Image className="absolute -bottom-45 -right-3 2xl:-right-10 z-10" width={236} height={236} src={white_sphere} alt="Big glossy sphere"/>
       <div className="w-full cash-cards">
         {pricingCards.map((card) => {
           return (
