@@ -8,6 +8,7 @@ import OurServices from "../OurServices";
 import ProjectWorkFlow from "../ProjectWorkFlow";
 import Pricing from "../Pricing";
 import AppBenefits from "../AppBenefits";
+import Delivery from "../Delivery";
 
 const Home = () => {
   return (
@@ -22,6 +23,8 @@ const Home = () => {
       <Pricing />
 
       <AppBenefits />
+
+      <Delivery />
 
       {/* <Footer /> */}
     </div>
