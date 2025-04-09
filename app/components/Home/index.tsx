@@ -14,7 +14,8 @@ const Home = () => {
   return (
     <div className="bg-[#FEF4FF] min-w-screen w-screen mx-auto min-h-screen px-2 sm:px-[30px]">
       <Header />
-      {/* <Hero /> */}
+      
+      <Hero />
 
       <OurServices />
 
